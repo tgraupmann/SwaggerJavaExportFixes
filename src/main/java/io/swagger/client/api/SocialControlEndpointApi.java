@@ -68,7 +68,7 @@ public class SocialControlEndpointApi {
     }
 
     /* Build call for socialLatestFriendsSocial */
-    private com.squareup.okhttp.Call socialLatestFriendsSocialCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call socialLatestFriendsSocialCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
 
@@ -94,10 +94,10 @@ public class SocialControlEndpointApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.getHttpClient().networkInterceptors().add(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
                     .body(new ProgressResponseBody(originalResponse.body(), progressListener))
                     .build();
@@ -127,7 +127,7 @@ public class SocialControlEndpointApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<ResponseOutputModelListSocialActionMessageModel> socialLatestFriendsSocialWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = socialLatestFriendsSocialCall(null, null);
+        okhttp3.Call call = socialLatestFriendsSocialCall(null, null);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListSocialActionMessageModel>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -139,7 +139,7 @@ public class SocialControlEndpointApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call socialLatestFriendsSocialAsync(final ApiCallback<ResponseOutputModelListSocialActionMessageModel> callback) throws ApiException {
+    public okhttp3.Call socialLatestFriendsSocialAsync(final ApiCallback<ResponseOutputModelListSocialActionMessageModel> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -160,13 +160,13 @@ public class SocialControlEndpointApi {
             };
         }
 
-        com.squareup.okhttp.Call call = socialLatestFriendsSocialCall(progressListener, progressRequestListener);
+        okhttp3.Call call = socialLatestFriendsSocialCall(progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListSocialActionMessageModel>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /* Build call for socialLatestInsiderPosts */
-    private com.squareup.okhttp.Call socialLatestInsiderPostsCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call socialLatestInsiderPostsCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
 
@@ -192,10 +192,10 @@ public class SocialControlEndpointApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.getHttpClient().networkInterceptors().add(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
                     .body(new ProgressResponseBody(originalResponse.body(), progressListener))
                     .build();
@@ -225,7 +225,7 @@ public class SocialControlEndpointApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<ResponseOutputModelListInsiderPostModel> socialLatestInsiderPostsWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = socialLatestInsiderPostsCall(null, null);
+        okhttp3.Call call = socialLatestInsiderPostsCall(null, null);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListInsiderPostModel>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -237,7 +237,7 @@ public class SocialControlEndpointApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call socialLatestInsiderPostsAsync(final ApiCallback<ResponseOutputModelListInsiderPostModel> callback) throws ApiException {
+    public okhttp3.Call socialLatestInsiderPostsAsync(final ApiCallback<ResponseOutputModelListInsiderPostModel> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -258,13 +258,13 @@ public class SocialControlEndpointApi {
             };
         }
 
-        com.squareup.okhttp.Call call = socialLatestInsiderPostsCall(progressListener, progressRequestListener);
+        okhttp3.Call call = socialLatestInsiderPostsCall(progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListInsiderPostModel>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /* Build call for socialLatestTweets */
-    private com.squareup.okhttp.Call socialLatestTweetsCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call socialLatestTweetsCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
 
@@ -290,10 +290,10 @@ public class SocialControlEndpointApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.getHttpClient().networkInterceptors().add(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
                     .body(new ProgressResponseBody(originalResponse.body(), progressListener))
                     .build();
@@ -323,7 +323,7 @@ public class SocialControlEndpointApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<ResponseOutputModelListTweetModel> socialLatestTweetsWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = socialLatestTweetsCall(null, null);
+        okhttp3.Call call = socialLatestTweetsCall(null, null);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListTweetModel>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -335,7 +335,7 @@ public class SocialControlEndpointApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call socialLatestTweetsAsync(final ApiCallback<ResponseOutputModelListTweetModel> callback) throws ApiException {
+    public okhttp3.Call socialLatestTweetsAsync(final ApiCallback<ResponseOutputModelListTweetModel> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -356,7 +356,7 @@ public class SocialControlEndpointApi {
             };
         }
 
-        com.squareup.okhttp.Call call = socialLatestTweetsCall(progressListener, progressRequestListener);
+        okhttp3.Call call = socialLatestTweetsCall(progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListTweetModel>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

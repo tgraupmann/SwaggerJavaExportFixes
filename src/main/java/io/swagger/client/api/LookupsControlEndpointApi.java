@@ -80,7 +80,7 @@ public class LookupsControlEndpointApi {
     }
 
     /* Build call for lookupsCountryList */
-    private com.squareup.okhttp.Call lookupsCountryListCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call lookupsCountryListCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
 
@@ -106,10 +106,10 @@ public class LookupsControlEndpointApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.getHttpClient().networkInterceptors().add(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
                     .body(new ProgressResponseBody(originalResponse.body(), progressListener))
                     .build();
@@ -139,7 +139,7 @@ public class LookupsControlEndpointApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<ResponseOutputModelListAddressCountryModel> lookupsCountryListWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = lookupsCountryListCall(null, null);
+        okhttp3.Call call = lookupsCountryListCall(null, null);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListAddressCountryModel>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -151,7 +151,7 @@ public class LookupsControlEndpointApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call lookupsCountryListAsync(final ApiCallback<ResponseOutputModelListAddressCountryModel> callback) throws ApiException {
+    public okhttp3.Call lookupsCountryListAsync(final ApiCallback<ResponseOutputModelListAddressCountryModel> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -172,13 +172,13 @@ public class LookupsControlEndpointApi {
             };
         }
 
-        com.squareup.okhttp.Call call = lookupsCountryListCall(progressListener, progressRequestListener);
+        okhttp3.Call call = lookupsCountryListCall(progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListAddressCountryModel>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /* Build call for lookupsGamePlatforms */
-    private com.squareup.okhttp.Call lookupsGamePlatformsCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call lookupsGamePlatformsCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
 
@@ -204,10 +204,10 @@ public class LookupsControlEndpointApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.getHttpClient().networkInterceptors().add(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
                     .body(new ProgressResponseBody(originalResponse.body(), progressListener))
                     .build();
@@ -237,7 +237,7 @@ public class LookupsControlEndpointApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<ResponseOutputModelListString> lookupsGamePlatformsWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = lookupsGamePlatformsCall(null, null);
+        okhttp3.Call call = lookupsGamePlatformsCall(null, null);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListString>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -249,7 +249,7 @@ public class LookupsControlEndpointApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call lookupsGamePlatformsAsync(final ApiCallback<ResponseOutputModelListString> callback) throws ApiException {
+    public okhttp3.Call lookupsGamePlatformsAsync(final ApiCallback<ResponseOutputModelListString> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -270,13 +270,13 @@ public class LookupsControlEndpointApi {
             };
         }
 
-        com.squareup.okhttp.Call call = lookupsGamePlatformsCall(progressListener, progressRequestListener);
+        okhttp3.Call call = lookupsGamePlatformsCall(progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListString>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /* Build call for lookupsGameTitleCallbackTemplates */
-    private com.squareup.okhttp.Call lookupsGameTitleCallbackTemplatesCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call lookupsGameTitleCallbackTemplatesCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
 
@@ -302,10 +302,10 @@ public class LookupsControlEndpointApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.getHttpClient().networkInterceptors().add(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
                     .body(new ProgressResponseBody(originalResponse.body(), progressListener))
                     .build();
@@ -335,7 +335,7 @@ public class LookupsControlEndpointApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<ResponseOutputModelListGameTitleCallbackTemplateModel> lookupsGameTitleCallbackTemplatesWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = lookupsGameTitleCallbackTemplatesCall(null, null);
+        okhttp3.Call call = lookupsGameTitleCallbackTemplatesCall(null, null);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListGameTitleCallbackTemplateModel>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -347,7 +347,7 @@ public class LookupsControlEndpointApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call lookupsGameTitleCallbackTemplatesAsync(final ApiCallback<ResponseOutputModelListGameTitleCallbackTemplateModel> callback) throws ApiException {
+    public okhttp3.Call lookupsGameTitleCallbackTemplatesAsync(final ApiCallback<ResponseOutputModelListGameTitleCallbackTemplateModel> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -368,13 +368,13 @@ public class LookupsControlEndpointApi {
             };
         }
 
-        com.squareup.okhttp.Call call = lookupsGameTitleCallbackTemplatesCall(progressListener, progressRequestListener);
+        okhttp3.Call call = lookupsGameTitleCallbackTemplatesCall(progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListGameTitleCallbackTemplateModel>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /* Build call for lookupsGameTitleValidationMethodTypes */
-    private com.squareup.okhttp.Call lookupsGameTitleValidationMethodTypesCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call lookupsGameTitleValidationMethodTypesCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
 
@@ -400,10 +400,10 @@ public class LookupsControlEndpointApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.getHttpClient().networkInterceptors().add(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
                     .body(new ProgressResponseBody(originalResponse.body(), progressListener))
                     .build();
@@ -433,7 +433,7 @@ public class LookupsControlEndpointApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<ResponseOutputModelListGameTitleValidationMethodTypeModel> lookupsGameTitleValidationMethodTypesWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = lookupsGameTitleValidationMethodTypesCall(null, null);
+        okhttp3.Call call = lookupsGameTitleValidationMethodTypesCall(null, null);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListGameTitleValidationMethodTypeModel>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -445,7 +445,7 @@ public class LookupsControlEndpointApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call lookupsGameTitleValidationMethodTypesAsync(final ApiCallback<ResponseOutputModelListGameTitleValidationMethodTypeModel> callback) throws ApiException {
+    public okhttp3.Call lookupsGameTitleValidationMethodTypesAsync(final ApiCallback<ResponseOutputModelListGameTitleValidationMethodTypeModel> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -466,13 +466,13 @@ public class LookupsControlEndpointApi {
             };
         }
 
-        com.squareup.okhttp.Call call = lookupsGameTitleValidationMethodTypesCall(progressListener, progressRequestListener);
+        okhttp3.Call call = lookupsGameTitleValidationMethodTypesCall(progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListGameTitleValidationMethodTypeModel>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /* Build call for lookupsGamingServerRegions */
-    private com.squareup.okhttp.Call lookupsGamingServerRegionsCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call lookupsGamingServerRegionsCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
 
@@ -498,10 +498,10 @@ public class LookupsControlEndpointApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.getHttpClient().networkInterceptors().add(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
                     .body(new ProgressResponseBody(originalResponse.body(), progressListener))
                     .build();
@@ -531,7 +531,7 @@ public class LookupsControlEndpointApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<ResponseOutputModelListGamingServerRegionModel> lookupsGamingServerRegionsWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = lookupsGamingServerRegionsCall(null, null);
+        okhttp3.Call call = lookupsGamingServerRegionsCall(null, null);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListGamingServerRegionModel>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -543,7 +543,7 @@ public class LookupsControlEndpointApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call lookupsGamingServerRegionsAsync(final ApiCallback<ResponseOutputModelListGamingServerRegionModel> callback) throws ApiException {
+    public okhttp3.Call lookupsGamingServerRegionsAsync(final ApiCallback<ResponseOutputModelListGamingServerRegionModel> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -564,13 +564,13 @@ public class LookupsControlEndpointApi {
             };
         }
 
-        com.squareup.okhttp.Call call = lookupsGamingServerRegionsCall(progressListener, progressRequestListener);
+        okhttp3.Call call = lookupsGamingServerRegionsCall(progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListGamingServerRegionModel>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /* Build call for lookupsGetArenaRankList */
-    private com.squareup.okhttp.Call lookupsGetArenaRankListCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call lookupsGetArenaRankListCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
 
@@ -596,10 +596,10 @@ public class LookupsControlEndpointApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.getHttpClient().networkInterceptors().add(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
                     .body(new ProgressResponseBody(originalResponse.body(), progressListener))
                     .build();
@@ -629,7 +629,7 @@ public class LookupsControlEndpointApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<ResponseOutputModelListPlayerRankingLevel> lookupsGetArenaRankListWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = lookupsGetArenaRankListCall(null, null);
+        okhttp3.Call call = lookupsGetArenaRankListCall(null, null);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListPlayerRankingLevel>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -641,7 +641,7 @@ public class LookupsControlEndpointApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call lookupsGetArenaRankListAsync(final ApiCallback<ResponseOutputModelListPlayerRankingLevel> callback) throws ApiException {
+    public okhttp3.Call lookupsGetArenaRankListAsync(final ApiCallback<ResponseOutputModelListPlayerRankingLevel> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -662,13 +662,13 @@ public class LookupsControlEndpointApi {
             };
         }
 
-        com.squareup.okhttp.Call call = lookupsGetArenaRankListCall(progressListener, progressRequestListener);
+        okhttp3.Call call = lookupsGetArenaRankListCall(progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListPlayerRankingLevel>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /* Build call for lookupsGetMapVotingTypes */
-    private com.squareup.okhttp.Call lookupsGetMapVotingTypesCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call lookupsGetMapVotingTypesCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
 
@@ -694,10 +694,10 @@ public class LookupsControlEndpointApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.getHttpClient().networkInterceptors().add(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
                     .body(new ProgressResponseBody(originalResponse.body(), progressListener))
                     .build();
@@ -727,7 +727,7 @@ public class LookupsControlEndpointApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<ResponseOutputModelListTournamentRoundRuleMapVotingStyleModel> lookupsGetMapVotingTypesWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = lookupsGetMapVotingTypesCall(null, null);
+        okhttp3.Call call = lookupsGetMapVotingTypesCall(null, null);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListTournamentRoundRuleMapVotingStyleModel>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -739,7 +739,7 @@ public class LookupsControlEndpointApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call lookupsGetMapVotingTypesAsync(final ApiCallback<ResponseOutputModelListTournamentRoundRuleMapVotingStyleModel> callback) throws ApiException {
+    public okhttp3.Call lookupsGetMapVotingTypesAsync(final ApiCallback<ResponseOutputModelListTournamentRoundRuleMapVotingStyleModel> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -760,13 +760,13 @@ public class LookupsControlEndpointApi {
             };
         }
 
-        com.squareup.okhttp.Call call = lookupsGetMapVotingTypesCall(progressListener, progressRequestListener);
+        okhttp3.Call call = lookupsGetMapVotingTypesCall(progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListTournamentRoundRuleMapVotingStyleModel>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /* Build call for lookupsGetRosterRoles */
-    private com.squareup.okhttp.Call lookupsGetRosterRolesCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call lookupsGetRosterRolesCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
 
@@ -792,10 +792,10 @@ public class LookupsControlEndpointApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.getHttpClient().networkInterceptors().add(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
                     .body(new ProgressResponseBody(originalResponse.body(), progressListener))
                     .build();
@@ -825,7 +825,7 @@ public class LookupsControlEndpointApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<ResponseOutputModelListTeamRosterRoleModel> lookupsGetRosterRolesWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = lookupsGetRosterRolesCall(null, null);
+        okhttp3.Call call = lookupsGetRosterRolesCall(null, null);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListTeamRosterRoleModel>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -837,7 +837,7 @@ public class LookupsControlEndpointApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call lookupsGetRosterRolesAsync(final ApiCallback<ResponseOutputModelListTeamRosterRoleModel> callback) throws ApiException {
+    public okhttp3.Call lookupsGetRosterRolesAsync(final ApiCallback<ResponseOutputModelListTeamRosterRoleModel> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -858,13 +858,13 @@ public class LookupsControlEndpointApi {
             };
         }
 
-        com.squareup.okhttp.Call call = lookupsGetRosterRolesCall(progressListener, progressRequestListener);
+        okhttp3.Call call = lookupsGetRosterRolesCall(progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListTeamRosterRoleModel>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /* Build call for lookupsQualifierTieBreakerTypes */
-    private com.squareup.okhttp.Call lookupsQualifierTieBreakerTypesCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call lookupsQualifierTieBreakerTypesCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
 
@@ -890,10 +890,10 @@ public class LookupsControlEndpointApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.getHttpClient().networkInterceptors().add(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
                     .body(new ProgressResponseBody(originalResponse.body(), progressListener))
                     .build();
@@ -923,7 +923,7 @@ public class LookupsControlEndpointApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<ResponseOutputModelListTournamentQualifierTieBreakerTypeModel> lookupsQualifierTieBreakerTypesWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = lookupsQualifierTieBreakerTypesCall(null, null);
+        okhttp3.Call call = lookupsQualifierTieBreakerTypesCall(null, null);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListTournamentQualifierTieBreakerTypeModel>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -935,7 +935,7 @@ public class LookupsControlEndpointApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call lookupsQualifierTieBreakerTypesAsync(final ApiCallback<ResponseOutputModelListTournamentQualifierTieBreakerTypeModel> callback) throws ApiException {
+    public okhttp3.Call lookupsQualifierTieBreakerTypesAsync(final ApiCallback<ResponseOutputModelListTournamentQualifierTieBreakerTypeModel> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -956,13 +956,13 @@ public class LookupsControlEndpointApi {
             };
         }
 
-        com.squareup.okhttp.Call call = lookupsQualifierTieBreakerTypesCall(progressListener, progressRequestListener);
+        okhttp3.Call call = lookupsQualifierTieBreakerTypesCall(progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListTournamentQualifierTieBreakerTypeModel>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /* Build call for lookupsStreamingServices */
-    private com.squareup.okhttp.Call lookupsStreamingServicesCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call lookupsStreamingServicesCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
 
@@ -988,10 +988,10 @@ public class LookupsControlEndpointApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.getHttpClient().networkInterceptors().add(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
                     .body(new ProgressResponseBody(originalResponse.body(), progressListener))
                     .build();
@@ -1021,7 +1021,7 @@ public class LookupsControlEndpointApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<ResponseOutputModelListStreamingServiceModel> lookupsStreamingServicesWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = lookupsStreamingServicesCall(null, null);
+        okhttp3.Call call = lookupsStreamingServicesCall(null, null);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListStreamingServiceModel>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -1033,7 +1033,7 @@ public class LookupsControlEndpointApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call lookupsStreamingServicesAsync(final ApiCallback<ResponseOutputModelListStreamingServiceModel> callback) throws ApiException {
+    public okhttp3.Call lookupsStreamingServicesAsync(final ApiCallback<ResponseOutputModelListStreamingServiceModel> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1054,13 +1054,13 @@ public class LookupsControlEndpointApi {
             };
         }
 
-        com.squareup.okhttp.Call call = lookupsStreamingServicesCall(progressListener, progressRequestListener);
+        okhttp3.Call call = lookupsStreamingServicesCall(progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListStreamingServiceModel>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /* Build call for lookupsTournamentJoinTypes */
-    private com.squareup.okhttp.Call lookupsTournamentJoinTypesCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call lookupsTournamentJoinTypesCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
 
@@ -1086,10 +1086,10 @@ public class LookupsControlEndpointApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.getHttpClient().networkInterceptors().add(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
                     .body(new ProgressResponseBody(originalResponse.body(), progressListener))
                     .build();
@@ -1119,7 +1119,7 @@ public class LookupsControlEndpointApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<ResponseOutputModelListTournamentJoinTypeModel> lookupsTournamentJoinTypesWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = lookupsTournamentJoinTypesCall(null, null);
+        okhttp3.Call call = lookupsTournamentJoinTypesCall(null, null);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListTournamentJoinTypeModel>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -1131,7 +1131,7 @@ public class LookupsControlEndpointApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call lookupsTournamentJoinTypesAsync(final ApiCallback<ResponseOutputModelListTournamentJoinTypeModel> callback) throws ApiException {
+    public okhttp3.Call lookupsTournamentJoinTypesAsync(final ApiCallback<ResponseOutputModelListTournamentJoinTypeModel> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1152,13 +1152,13 @@ public class LookupsControlEndpointApi {
             };
         }
 
-        com.squareup.okhttp.Call call = lookupsTournamentJoinTypesCall(progressListener, progressRequestListener);
+        okhttp3.Call call = lookupsTournamentJoinTypesCall(progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListTournamentJoinTypeModel>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /* Build call for lookupsTournamentPairingTypes */
-    private com.squareup.okhttp.Call lookupsTournamentPairingTypesCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call lookupsTournamentPairingTypesCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
 
@@ -1184,10 +1184,10 @@ public class LookupsControlEndpointApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.getHttpClient().networkInterceptors().add(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
                     .body(new ProgressResponseBody(originalResponse.body(), progressListener))
                     .build();
@@ -1217,7 +1217,7 @@ public class LookupsControlEndpointApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<ResponseOutputModelListTournamentPairingTypeModel> lookupsTournamentPairingTypesWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = lookupsTournamentPairingTypesCall(null, null);
+        okhttp3.Call call = lookupsTournamentPairingTypesCall(null, null);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListTournamentPairingTypeModel>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -1229,7 +1229,7 @@ public class LookupsControlEndpointApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call lookupsTournamentPairingTypesAsync(final ApiCallback<ResponseOutputModelListTournamentPairingTypeModel> callback) throws ApiException {
+    public okhttp3.Call lookupsTournamentPairingTypesAsync(final ApiCallback<ResponseOutputModelListTournamentPairingTypeModel> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1250,13 +1250,13 @@ public class LookupsControlEndpointApi {
             };
         }
 
-        com.squareup.okhttp.Call call = lookupsTournamentPairingTypesCall(progressListener, progressRequestListener);
+        okhttp3.Call call = lookupsTournamentPairingTypesCall(progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListTournamentPairingTypeModel>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /* Build call for lookupsTournamentPrizeFundingTypes */
-    private com.squareup.okhttp.Call lookupsTournamentPrizeFundingTypesCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call lookupsTournamentPrizeFundingTypesCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
 
@@ -1282,10 +1282,10 @@ public class LookupsControlEndpointApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.getHttpClient().networkInterceptors().add(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
                     .body(new ProgressResponseBody(originalResponse.body(), progressListener))
                     .build();
@@ -1315,7 +1315,7 @@ public class LookupsControlEndpointApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<ResponseOutputModelListTournamentPrizeFundingTypeModel> lookupsTournamentPrizeFundingTypesWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = lookupsTournamentPrizeFundingTypesCall(null, null);
+        okhttp3.Call call = lookupsTournamentPrizeFundingTypesCall(null, null);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListTournamentPrizeFundingTypeModel>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -1327,7 +1327,7 @@ public class LookupsControlEndpointApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call lookupsTournamentPrizeFundingTypesAsync(final ApiCallback<ResponseOutputModelListTournamentPrizeFundingTypeModel> callback) throws ApiException {
+    public okhttp3.Call lookupsTournamentPrizeFundingTypesAsync(final ApiCallback<ResponseOutputModelListTournamentPrizeFundingTypeModel> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1348,13 +1348,13 @@ public class LookupsControlEndpointApi {
             };
         }
 
-        com.squareup.okhttp.Call call = lookupsTournamentPrizeFundingTypesCall(progressListener, progressRequestListener);
+        okhttp3.Call call = lookupsTournamentPrizeFundingTypesCall(progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListTournamentPrizeFundingTypeModel>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /* Build call for lookupsTournamentSeedingTypes */
-    private com.squareup.okhttp.Call lookupsTournamentSeedingTypesCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call lookupsTournamentSeedingTypesCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
 
@@ -1380,10 +1380,10 @@ public class LookupsControlEndpointApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.getHttpClient().networkInterceptors().add(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
                     .body(new ProgressResponseBody(originalResponse.body(), progressListener))
                     .build();
@@ -1413,7 +1413,7 @@ public class LookupsControlEndpointApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<ResponseOutputModelListTournamentSeedingTypeModel> lookupsTournamentSeedingTypesWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = lookupsTournamentSeedingTypesCall(null, null);
+        okhttp3.Call call = lookupsTournamentSeedingTypesCall(null, null);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListTournamentSeedingTypeModel>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -1425,7 +1425,7 @@ public class LookupsControlEndpointApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call lookupsTournamentSeedingTypesAsync(final ApiCallback<ResponseOutputModelListTournamentSeedingTypeModel> callback) throws ApiException {
+    public okhttp3.Call lookupsTournamentSeedingTypesAsync(final ApiCallback<ResponseOutputModelListTournamentSeedingTypeModel> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1446,13 +1446,13 @@ public class LookupsControlEndpointApi {
             };
         }
 
-        com.squareup.okhttp.Call call = lookupsTournamentSeedingTypesCall(progressListener, progressRequestListener);
+        okhttp3.Call call = lookupsTournamentSeedingTypesCall(progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListTournamentSeedingTypeModel>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /* Build call for lookupsTournamentTypes */
-    private com.squareup.okhttp.Call lookupsTournamentTypesCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call lookupsTournamentTypesCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
 
@@ -1478,10 +1478,10 @@ public class LookupsControlEndpointApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.getHttpClient().networkInterceptors().add(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
                     .body(new ProgressResponseBody(originalResponse.body(), progressListener))
                     .build();
@@ -1511,7 +1511,7 @@ public class LookupsControlEndpointApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<ResponseOutputModelListTournamentTypeModel> lookupsTournamentTypesWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = lookupsTournamentTypesCall(null, null);
+        okhttp3.Call call = lookupsTournamentTypesCall(null, null);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListTournamentTypeModel>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -1523,7 +1523,7 @@ public class LookupsControlEndpointApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call lookupsTournamentTypesAsync(final ApiCallback<ResponseOutputModelListTournamentTypeModel> callback) throws ApiException {
+    public okhttp3.Call lookupsTournamentTypesAsync(final ApiCallback<ResponseOutputModelListTournamentTypeModel> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1544,7 +1544,7 @@ public class LookupsControlEndpointApi {
             };
         }
 
-        com.squareup.okhttp.Call call = lookupsTournamentTypesCall(progressListener, progressRequestListener);
+        okhttp3.Call call = lookupsTournamentTypesCall(progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListTournamentTypeModel>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

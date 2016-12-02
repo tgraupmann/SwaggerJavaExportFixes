@@ -66,7 +66,7 @@ public class StreamingControlEndpointApi {
     }
 
     /* Build call for streamingLatestLiveStreams */
-    private com.squareup.okhttp.Call streamingLatestLiveStreamsCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call streamingLatestLiveStreamsCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
 
@@ -92,10 +92,10 @@ public class StreamingControlEndpointApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.getHttpClient().networkInterceptors().add(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
                     .body(new ProgressResponseBody(originalResponse.body(), progressListener))
                     .build();
@@ -125,7 +125,7 @@ public class StreamingControlEndpointApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<ResponseOutputModelListEntityStreamingModel> streamingLatestLiveStreamsWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = streamingLatestLiveStreamsCall(null, null);
+        okhttp3.Call call = streamingLatestLiveStreamsCall(null, null);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListEntityStreamingModel>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -137,7 +137,7 @@ public class StreamingControlEndpointApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call streamingLatestLiveStreamsAsync(final ApiCallback<ResponseOutputModelListEntityStreamingModel> callback) throws ApiException {
+    public okhttp3.Call streamingLatestLiveStreamsAsync(final ApiCallback<ResponseOutputModelListEntityStreamingModel> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -158,13 +158,13 @@ public class StreamingControlEndpointApi {
             };
         }
 
-        com.squareup.okhttp.Call call = streamingLatestLiveStreamsCall(progressListener, progressRequestListener);
+        okhttp3.Call call = streamingLatestLiveStreamsCall(progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListEntityStreamingModel>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /* Build call for streamingLatestLiveStreamsAdvancedSearch */
-    private com.squareup.okhttp.Call streamingLatestLiveStreamsAdvancedSearchCall(Integer topStreamsCount, List<String> gameShortCodeList, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call streamingLatestLiveStreamsAdvancedSearchCall(Integer topStreamsCount, List<String> gameShortCodeList, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // verify the required parameter 'topStreamsCount' is set
@@ -204,10 +204,10 @@ public class StreamingControlEndpointApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.getHttpClient().networkInterceptors().add(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
                     .body(new ProgressResponseBody(originalResponse.body(), progressListener))
                     .build();
@@ -241,7 +241,7 @@ public class StreamingControlEndpointApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<ResponseOutputModelListEntityStreamingModel> streamingLatestLiveStreamsAdvancedSearchWithHttpInfo(Integer topStreamsCount, List<String> gameShortCodeList) throws ApiException {
-        com.squareup.okhttp.Call call = streamingLatestLiveStreamsAdvancedSearchCall(topStreamsCount, gameShortCodeList, null, null);
+        okhttp3.Call call = streamingLatestLiveStreamsAdvancedSearchCall(topStreamsCount, gameShortCodeList, null, null);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListEntityStreamingModel>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -255,7 +255,7 @@ public class StreamingControlEndpointApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call streamingLatestLiveStreamsAdvancedSearchAsync(Integer topStreamsCount, List<String> gameShortCodeList, final ApiCallback<ResponseOutputModelListEntityStreamingModel> callback) throws ApiException {
+    public okhttp3.Call streamingLatestLiveStreamsAdvancedSearchAsync(Integer topStreamsCount, List<String> gameShortCodeList, final ApiCallback<ResponseOutputModelListEntityStreamingModel> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -276,13 +276,13 @@ public class StreamingControlEndpointApi {
             };
         }
 
-        com.squareup.okhttp.Call call = streamingLatestLiveStreamsAdvancedSearchCall(topStreamsCount, gameShortCodeList, progressListener, progressRequestListener);
+        okhttp3.Call call = streamingLatestLiveStreamsAdvancedSearchCall(topStreamsCount, gameShortCodeList, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListEntityStreamingModel>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /* Build call for streamingLatestLiveStreams_0 */
-    private com.squareup.okhttp.Call streamingLatestLiveStreams_0Call(Integer topStreamCount, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call streamingLatestLiveStreams_0Call(Integer topStreamCount, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // verify the required parameter 'topStreamCount' is set
@@ -314,10 +314,10 @@ public class StreamingControlEndpointApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.getHttpClient().networkInterceptors().add(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
                     .body(new ProgressResponseBody(originalResponse.body(), progressListener))
                     .build();
@@ -349,7 +349,7 @@ public class StreamingControlEndpointApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<ResponseOutputModelListEntityStreamingModel> streamingLatestLiveStreams_0WithHttpInfo(Integer topStreamCount) throws ApiException {
-        com.squareup.okhttp.Call call = streamingLatestLiveStreams_0Call(topStreamCount, null, null);
+        okhttp3.Call call = streamingLatestLiveStreams_0Call(topStreamCount, null, null);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListEntityStreamingModel>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -362,7 +362,7 @@ public class StreamingControlEndpointApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call streamingLatestLiveStreams_0Async(Integer topStreamCount, final ApiCallback<ResponseOutputModelListEntityStreamingModel> callback) throws ApiException {
+    public okhttp3.Call streamingLatestLiveStreams_0Async(Integer topStreamCount, final ApiCallback<ResponseOutputModelListEntityStreamingModel> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -383,13 +383,13 @@ public class StreamingControlEndpointApi {
             };
         }
 
-        com.squareup.okhttp.Call call = streamingLatestLiveStreams_0Call(topStreamCount, progressListener, progressRequestListener);
+        okhttp3.Call call = streamingLatestLiveStreams_0Call(topStreamCount, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListEntityStreamingModel>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /* Build call for streamingLatestLiveStreams_1 */
-    private com.squareup.okhttp.Call streamingLatestLiveStreams_1Call(String gameShortcode, Integer topStreamCount, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call streamingLatestLiveStreams_1Call(String gameShortcode, Integer topStreamCount, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // verify the required parameter 'gameShortcode' is set
@@ -427,10 +427,10 @@ public class StreamingControlEndpointApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.getHttpClient().networkInterceptors().add(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
                     .body(new ProgressResponseBody(originalResponse.body(), progressListener))
                     .build();
@@ -464,7 +464,7 @@ public class StreamingControlEndpointApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<ResponseOutputModelListEntityStreamingModel> streamingLatestLiveStreams_1WithHttpInfo(String gameShortcode, Integer topStreamCount) throws ApiException {
-        com.squareup.okhttp.Call call = streamingLatestLiveStreams_1Call(gameShortcode, topStreamCount, null, null);
+        okhttp3.Call call = streamingLatestLiveStreams_1Call(gameShortcode, topStreamCount, null, null);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListEntityStreamingModel>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -478,7 +478,7 @@ public class StreamingControlEndpointApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call streamingLatestLiveStreams_1Async(String gameShortcode, Integer topStreamCount, final ApiCallback<ResponseOutputModelListEntityStreamingModel> callback) throws ApiException {
+    public okhttp3.Call streamingLatestLiveStreams_1Async(String gameShortcode, Integer topStreamCount, final ApiCallback<ResponseOutputModelListEntityStreamingModel> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -499,7 +499,7 @@ public class StreamingControlEndpointApi {
             };
         }
 
-        com.squareup.okhttp.Call call = streamingLatestLiveStreams_1Call(gameShortcode, topStreamCount, progressListener, progressRequestListener);
+        okhttp3.Call call = streamingLatestLiveStreams_1Call(gameShortcode, topStreamCount, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<ResponseOutputModelListEntityStreamingModel>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

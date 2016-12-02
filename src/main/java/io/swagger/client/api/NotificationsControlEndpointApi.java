@@ -66,7 +66,7 @@ public class NotificationsControlEndpointApi {
     }
 
     /* Build call for notificationList */
-    private com.squareup.okhttp.Call notificationListCall(String lastDateTime, Integer topCount, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call notificationListCall(String lastDateTime, Integer topCount, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // verify the required parameter 'lastDateTime' is set
@@ -106,10 +106,10 @@ public class NotificationsControlEndpointApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.getHttpClient().networkInterceptors().add(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
                     .body(new ProgressResponseBody(originalResponse.body(), progressListener))
                     .build();
@@ -143,7 +143,7 @@ public class NotificationsControlEndpointApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<ResponseOutputModelNotificationProfileCompleteOutputModel> notificationListWithHttpInfo(String lastDateTime, Integer topCount) throws ApiException {
-        com.squareup.okhttp.Call call = notificationListCall(lastDateTime, topCount, null, null);
+        okhttp3.Call call = notificationListCall(lastDateTime, topCount, null, null);
         Type localVarReturnType = new TypeToken<ResponseOutputModelNotificationProfileCompleteOutputModel>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -157,7 +157,7 @@ public class NotificationsControlEndpointApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call notificationListAsync(String lastDateTime, Integer topCount, final ApiCallback<ResponseOutputModelNotificationProfileCompleteOutputModel> callback) throws ApiException {
+    public okhttp3.Call notificationListAsync(String lastDateTime, Integer topCount, final ApiCallback<ResponseOutputModelNotificationProfileCompleteOutputModel> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -178,7 +178,7 @@ public class NotificationsControlEndpointApi {
             };
         }
 
-        com.squareup.okhttp.Call call = notificationListCall(lastDateTime, topCount, progressListener, progressRequestListener);
+        okhttp3.Call call = notificationListCall(lastDateTime, topCount, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<ResponseOutputModelNotificationProfileCompleteOutputModel>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

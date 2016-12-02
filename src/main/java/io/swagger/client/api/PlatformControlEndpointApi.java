@@ -68,7 +68,7 @@ public class PlatformControlEndpointApi {
     }
 
     /* Build call for platformMaintenanceStatus */
-    private com.squareup.okhttp.Call platformMaintenanceStatusCall(String lastUpdatedDateTime, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call platformMaintenanceStatusCall(String lastUpdatedDateTime, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // verify the required parameter 'lastUpdatedDateTime' is set
@@ -101,10 +101,10 @@ public class PlatformControlEndpointApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.getHttpClient().networkInterceptors().add(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
                     .body(new ProgressResponseBody(originalResponse.body(), progressListener))
                     .build();
@@ -136,7 +136,7 @@ public class PlatformControlEndpointApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<ResponseOutputModelMaintenanceModeModel> platformMaintenanceStatusWithHttpInfo(String lastUpdatedDateTime) throws ApiException {
-        com.squareup.okhttp.Call call = platformMaintenanceStatusCall(lastUpdatedDateTime, null, null);
+        okhttp3.Call call = platformMaintenanceStatusCall(lastUpdatedDateTime, null, null);
         Type localVarReturnType = new TypeToken<ResponseOutputModelMaintenanceModeModel>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -149,7 +149,7 @@ public class PlatformControlEndpointApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call platformMaintenanceStatusAsync(String lastUpdatedDateTime, final ApiCallback<ResponseOutputModelMaintenanceModeModel> callback) throws ApiException {
+    public okhttp3.Call platformMaintenanceStatusAsync(String lastUpdatedDateTime, final ApiCallback<ResponseOutputModelMaintenanceModeModel> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -170,13 +170,13 @@ public class PlatformControlEndpointApi {
             };
         }
 
-        com.squareup.okhttp.Call call = platformMaintenanceStatusCall(lastUpdatedDateTime, progressListener, progressRequestListener);
+        okhttp3.Call call = platformMaintenanceStatusCall(lastUpdatedDateTime, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<ResponseOutputModelMaintenanceModeModel>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /* Build call for platformRazerCommsVersion */
-    private com.squareup.okhttp.Call platformRazerCommsVersionCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call platformRazerCommsVersionCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
 
@@ -202,10 +202,10 @@ public class PlatformControlEndpointApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.getHttpClient().networkInterceptors().add(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
                     .body(new ProgressResponseBody(originalResponse.body(), progressListener))
                     .build();
@@ -235,7 +235,7 @@ public class PlatformControlEndpointApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<ResponseOutputModelCommsModel> platformRazerCommsVersionWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = platformRazerCommsVersionCall(null, null);
+        okhttp3.Call call = platformRazerCommsVersionCall(null, null);
         Type localVarReturnType = new TypeToken<ResponseOutputModelCommsModel>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -247,7 +247,7 @@ public class PlatformControlEndpointApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call platformRazerCommsVersionAsync(final ApiCallback<ResponseOutputModelCommsModel> callback) throws ApiException {
+    public okhttp3.Call platformRazerCommsVersionAsync(final ApiCallback<ResponseOutputModelCommsModel> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -268,13 +268,13 @@ public class PlatformControlEndpointApi {
             };
         }
 
-        com.squareup.okhttp.Call call = platformRazerCommsVersionCall(progressListener, progressRequestListener);
+        okhttp3.Call call = platformRazerCommsVersionCall(progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<ResponseOutputModelCommsModel>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /* Build call for platformTimeSynchronization */
-    private com.squareup.okhttp.Call platformTimeSynchronizationCall(String clientTime, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call platformTimeSynchronizationCall(String clientTime, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // verify the required parameter 'clientTime' is set
@@ -307,10 +307,10 @@ public class PlatformControlEndpointApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.getHttpClient().networkInterceptors().add(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
                     .body(new ProgressResponseBody(originalResponse.body(), progressListener))
                     .build();
@@ -342,7 +342,7 @@ public class PlatformControlEndpointApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<ResponseOutputModelSynchronizationTimeModel> platformTimeSynchronizationWithHttpInfo(String clientTime) throws ApiException {
-        com.squareup.okhttp.Call call = platformTimeSynchronizationCall(clientTime, null, null);
+        okhttp3.Call call = platformTimeSynchronizationCall(clientTime, null, null);
         Type localVarReturnType = new TypeToken<ResponseOutputModelSynchronizationTimeModel>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -355,7 +355,7 @@ public class PlatformControlEndpointApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call platformTimeSynchronizationAsync(String clientTime, final ApiCallback<ResponseOutputModelSynchronizationTimeModel> callback) throws ApiException {
+    public okhttp3.Call platformTimeSynchronizationAsync(String clientTime, final ApiCallback<ResponseOutputModelSynchronizationTimeModel> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -376,7 +376,7 @@ public class PlatformControlEndpointApi {
             };
         }
 
-        com.squareup.okhttp.Call call = platformTimeSynchronizationCall(clientTime, progressListener, progressRequestListener);
+        okhttp3.Call call = platformTimeSynchronizationCall(clientTime, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<ResponseOutputModelSynchronizationTimeModel>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

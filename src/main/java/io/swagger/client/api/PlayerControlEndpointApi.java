@@ -69,7 +69,7 @@ public class PlayerControlEndpointApi {
     }
 
     /* Build call for playerGetRank */
-    private com.squareup.okhttp.Call playerGetRankCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call playerGetRankCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
 
@@ -95,10 +95,10 @@ public class PlayerControlEndpointApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.getHttpClient().networkInterceptors().add(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
                     .body(new ProgressResponseBody(originalResponse.body(), progressListener))
                     .build();
@@ -128,7 +128,7 @@ public class PlayerControlEndpointApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<ResponseOutputModelPlayerRankingLevel> playerGetRankWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = playerGetRankCall(null, null);
+        okhttp3.Call call = playerGetRankCall(null, null);
         Type localVarReturnType = new TypeToken<ResponseOutputModelPlayerRankingLevel>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -140,7 +140,7 @@ public class PlayerControlEndpointApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call playerGetRankAsync(final ApiCallback<ResponseOutputModelPlayerRankingLevel> callback) throws ApiException {
+    public okhttp3.Call playerGetRankAsync(final ApiCallback<ResponseOutputModelPlayerRankingLevel> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -161,13 +161,13 @@ public class PlayerControlEndpointApi {
             };
         }
 
-        com.squareup.okhttp.Call call = playerGetRankCall(progressListener, progressRequestListener);
+        okhttp3.Call call = playerGetRankCall(progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<ResponseOutputModelPlayerRankingLevel>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /* Build call for playerIsAdmin */
-    private com.squareup.okhttp.Call playerIsAdminCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call playerIsAdminCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
 
@@ -193,10 +193,10 @@ public class PlayerControlEndpointApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.getHttpClient().networkInterceptors().add(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
                     .body(new ProgressResponseBody(originalResponse.body(), progressListener))
                     .build();
@@ -226,7 +226,7 @@ public class PlayerControlEndpointApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<ResponseOutputModelBoolean> playerIsAdminWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = playerIsAdminCall(null, null);
+        okhttp3.Call call = playerIsAdminCall(null, null);
         Type localVarReturnType = new TypeToken<ResponseOutputModelBoolean>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -238,7 +238,7 @@ public class PlayerControlEndpointApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call playerIsAdminAsync(final ApiCallback<ResponseOutputModelBoolean> callback) throws ApiException {
+    public okhttp3.Call playerIsAdminAsync(final ApiCallback<ResponseOutputModelBoolean> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -259,13 +259,13 @@ public class PlayerControlEndpointApi {
             };
         }
 
-        com.squareup.okhttp.Call call = playerIsAdminCall(progressListener, progressRequestListener);
+        okhttp3.Call call = playerIsAdminCall(progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<ResponseOutputModelBoolean>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /* Build call for playerLastMatchId */
-    private com.squareup.okhttp.Call playerLastMatchIdCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call playerLastMatchIdCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
 
@@ -291,10 +291,10 @@ public class PlayerControlEndpointApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.getHttpClient().networkInterceptors().add(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
                     .body(new ProgressResponseBody(originalResponse.body(), progressListener))
                     .build();
@@ -324,7 +324,7 @@ public class PlayerControlEndpointApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<ResponseOutputModelInt64> playerLastMatchIdWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = playerLastMatchIdCall(null, null);
+        okhttp3.Call call = playerLastMatchIdCall(null, null);
         Type localVarReturnType = new TypeToken<ResponseOutputModelInt64>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -336,7 +336,7 @@ public class PlayerControlEndpointApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call playerLastMatchIdAsync(final ApiCallback<ResponseOutputModelInt64> callback) throws ApiException {
+    public okhttp3.Call playerLastMatchIdAsync(final ApiCallback<ResponseOutputModelInt64> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -357,13 +357,13 @@ public class PlayerControlEndpointApi {
             };
         }
 
-        com.squareup.okhttp.Call call = playerLastMatchIdCall(progressListener, progressRequestListener);
+        okhttp3.Call call = playerLastMatchIdCall(progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<ResponseOutputModelInt64>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /* Build call for playerMyActiveMatch */
-    private com.squareup.okhttp.Call playerMyActiveMatchCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call playerMyActiveMatchCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
 
@@ -389,10 +389,10 @@ public class PlayerControlEndpointApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+            apiClient.getHttpClient().networkInterceptors().add(new okhttp3.Interceptor() {
                 @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
+                    okhttp3.Response originalResponse = chain.proceed(chain.request());
                     return originalResponse.newBuilder()
                     .body(new ProgressResponseBody(originalResponse.body(), progressListener))
                     .build();
@@ -422,7 +422,7 @@ public class PlayerControlEndpointApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<ResponseOutputModelTournamentMatchMyActiveMatchModel> playerMyActiveMatchWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = playerMyActiveMatchCall(null, null);
+        okhttp3.Call call = playerMyActiveMatchCall(null, null);
         Type localVarReturnType = new TypeToken<ResponseOutputModelTournamentMatchMyActiveMatchModel>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -434,7 +434,7 @@ public class PlayerControlEndpointApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call playerMyActiveMatchAsync(final ApiCallback<ResponseOutputModelTournamentMatchMyActiveMatchModel> callback) throws ApiException {
+    public okhttp3.Call playerMyActiveMatchAsync(final ApiCallback<ResponseOutputModelTournamentMatchMyActiveMatchModel> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -455,7 +455,7 @@ public class PlayerControlEndpointApi {
             };
         }
 
-        com.squareup.okhttp.Call call = playerMyActiveMatchCall(progressListener, progressRequestListener);
+        okhttp3.Call call = playerMyActiveMatchCall(progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<ResponseOutputModelTournamentMatchMyActiveMatchModel>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
