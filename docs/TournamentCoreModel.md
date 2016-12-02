@@ -1,0 +1,52 @@
+
+# TournamentCoreModel
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**tournamentIsComplete** | **Boolean** |  |  [optional]
+**tournamentIsLive** | **Boolean** |  |  [optional]
+**tournamentLiveDateTime** | [**DateTime**](DateTime.md) |  |  [optional]
+**tournamentId** | **Long** |  |  [optional]
+**tournamentTitle** | **String** |  |  [optional]
+**tournamentSubTitle** | **String** |  |  [optional]
+**highlightColor** | **String** |  |  [optional]
+**tournamentDescription** | **String** |  |  [optional]
+**matchConnectionInstructions** | **String** |  |  [optional]
+**gameTitleId** | **Integer** |  |  [optional]
+**isTeamTournament** | **Boolean** |  |  [optional]
+**minimumNumberOfEntities** | **Integer** |  |  [optional]
+**maximumNumberOfEntities** | **Integer** |  |  [optional]
+**teamSize** | **Integer** |  |  [optional]
+**tournamentTypeId** | **Integer** |  |  [optional]
+**originalTournamentTypeId** | **Integer** |  |  [optional]
+**tournamentTypeName** | **String** |  |  [optional]
+**tournamentFeeAmount** | **Double** |  |  [optional]
+**tournamentStartDateTime** | [**DateTime**](DateTime.md) |  |  [optional]
+**tournamentEndDateTime** | [**DateTime**](DateTime.md) |  |  [optional]
+**registrationCutoffDateTime** | [**DateTime**](DateTime.md) |  |  [optional]
+**isPublic** | **Boolean** |  |  [optional]
+**isFavorite** | **Boolean** |  |  [optional]
+**enableMatchLobby** | **Boolean** |  |  [optional]
+**logoIsBorderless** | **Boolean** |  |  [optional]
+**logoUrl** | **String** |  |  [optional]
+**backgroundUrl** | **String** |  |  [optional]
+**logoRelativeUrl** | **String** |  |  [optional]
+**backgroundRelativeUrl** | **String** |  |  [optional]
+**backgroundHomeUrl** | **String** |  |  [optional]
+**backgroundHomeRelativeUrl** | **String** |  |  [optional]
+**backgroundSearchUrl** | **String** |  |  [optional]
+**backgroundSearchRelativeUrl** | **String** |  |  [optional]
+**joinPasswordRequired** | **Boolean** |  |  [optional]
+**hasConsolationRound** | **Boolean** |  |  [optional]
+**currentNumberOfParticipants** | **Integer** |  |  [optional]
+**game** | [**GameTitleOutputModel**](GameTitleOutputModel.md) |  |  [optional]
+**lastUpdatedDateTime** | [**DateTime**](DateTime.md) |  |  [optional]
+**websiteUrl** | **String** |  |  [optional]
+**facebookUrl** | **String** |  |  [optional]
+**twitchUrl** | **String** |  |  [optional]
+**instagramUrl** | **String** |  |  [optional]
+**twitterUrl** | **String** |  |  [optional]
+
+
+

@@ -1,0 +1,51 @@
+
+# TournamentMatchIssuedGamingServerModel
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**issuedDateTime** | [**DateTime**](DateTime.md) |  |  [optional]
+**requestedServerChange** | **Boolean** |  |  [optional]
+**requestedByEntityId** | **Long** |  |  [optional]
+**gamingServerId** | **Integer** |  |  [optional]
+**gameTitleId** | **Integer** |  |  [optional]
+**gameName** | **String** |  |  [optional]
+**gamingServerAddedDateTime** | [**DateTime**](DateTime.md) |  |  [optional]
+**gamingServerTypeCode** | **String** |  |  [optional]
+**gamingServerTypeId** | **Integer** |  |  [optional]
+**gamingServerTypeName** | **String** |  |  [optional]
+**gamingServerLocationId** | **Integer** |  |  [optional]
+**gamingServerCityName** | **String** |  |  [optional]
+**addressCountryId** | **Integer** |  |  [optional]
+**addressCountry** | [**AddressCountryModel**](AddressCountryModel.md) |  |  [optional]
+**gamingServerRegionId** | **Integer** |  |  [optional]
+**gamingServerRegionName** | **String** |  |  [optional]
+**gamingServerName** | **String** |  |  [optional]
+**ipAddress** | **String** |  |  [optional]
+**streamingPort** | **String** |  |  [optional]
+**gamePort** | **String** |  |  [optional]
+**gameQueryPort** | **String** |  |  [optional]
+**gamingServerHostingProviderCode** | **String** |  |  [optional]
+**gamingServerHostingProviderId** | **Integer** |  |  [optional]
+**gamingServerHostingProviderName** | **String** |  |  [optional]
+**gamingServerModeTypeCode** | **String** |  |  [optional]
+**gamingServerModeTypeId** | **Integer** |  |  [optional]
+**gamingServerModeTypeName** | **String** |  |  [optional]
+**joinPassword** | **String** |  |  [optional]
+**lastHeartbeatDateTime** | [**DateTime**](DateTime.md) |  |  [optional]
+**externalCallbackTemplate** | **String** |  |  [optional]
+**internalCallbackTemplate** | **String** |  |  [optional]
+**isInUsed** | **Boolean** |  |  [optional]
+**gameModVersion** | **Float** |  |  [optional]
+**currentGameModVersion** | **Float** |  |  [optional]
+**isPremiumServer** | **Boolean** |  |  [optional]
+**thirdPartyServerIdentifier** | **String** |  |  [optional]
+**gameServerVersion** | **String** |  |  [optional]
+**isServerOutdated** | **Boolean** |  |  [optional]
+**gameShortCode** | **String** |  |  [optional]
+**lanTag** | **String** |  |  [optional]
+**awsInstanceId** | **String** |  |  [optional]
+**awsRegionName** | **String** |  |  [optional]
+
+
+
